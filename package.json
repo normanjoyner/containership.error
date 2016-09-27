@@ -1,0 +1,18 @@
+{
+  "name": "@containership/containership.error",
+  "version": "0.0.0",
+  "description": "The Containership Error Standard",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ContainerShip Developers <developers@containership.io>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/containership/containership.error/issues"
+  },
+  "homepage": "https://github.com/containership/containership.error#readme",
+  "dependencies": {
+    "lodash": "^4.16.1"
+  }
+}
