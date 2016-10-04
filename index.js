@@ -7,19 +7,27 @@ class CSError {
     constructor(type, message, options) {
         this.body = {};
 
-        if(typeof type === 'number'){
+        if(typeof type === 'number') {
             this.code = type;
-        }
-
-        const error = error_types[type];
-
-        if(error){
-            this.code = error.code;
-            this.body.message = error.message;
+        } else if (typeof type === 'string') {
+            const error = error_types[type];
+            if(error){
+                this.code = error.code;
+                this.body.message = error.message;
+            } else {
+                this.body.message = type;
+            }
+        } else if (typeof type === 'object' && type.message) {
+            this.code = type.code || 400;
+            this.body.message = type.message;
         }
 
         if(message) {
-            this.body.message = message;
+            if(typeof message === 'string') {
+                this.body.message = message;
+            } else if (typeof message === 'object' && message.message) {
+                this.body.message = message.message;
+            }
         }
 
         if(options) {
