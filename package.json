@@ -1,6 +1,6 @@
 {
   "name": "@containership/containership.error",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The Containership Error Standard",
   "main": "index.js",
   "scripts": {
